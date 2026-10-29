@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Gabriela Peixoto | Odontologia Humanizada</title>
+    <meta
+      name="description"
+      content="Odontologia humanizada, estética dental e cuidado preventivo com a Dra. Gabriela Peixoto."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #f5f1eb;
+        --bg-soft: #f0ece6;
+        --panel: #f2efe9;
+        --card: #f8f7f5;
+        --dark: #1c1a17;
+        --muted: #585452;
+        --gold: #c5a880;
+        --gold-deep: #a98d69;
+        --blue-soft: #b9c9d9;
+        --line: rgba(28, 26, 23, 0.12);
+        --green: #2fd66e;
+        --green-dark: #19c45d;
+        --navy: #1b2d3d;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: var(--bg);
+        color: var(--dark);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1280px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(245, 241, 235, 0.86);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar-inner {
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 260px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1px solid rgba(28, 26, 23, 0.6);
+        display: grid;
+        place-items: center;
+        position: relative;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .brand-mark::before {
+        content: "G";
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.55rem;
+        font-weight: 700;
+      }
+
+      .brand-text {
+        line-height: 1.1;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.2rem, 2vw, 2.2rem);
+        letter-spacing: 0.02em;
+      }
+
+      .brand-sub {
+        display: block;
+        font-size: 0.7rem;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        opacity: 0.8;
+        margin-top: 2px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 42px;
+        flex: 1;
+      }
+
+      .nav a {
+        font-size: 1rem;
+        color: var(--dark);
+        opacity: 0.9;
+        transition: opacity 0.2s ease;
+      }
+
+      .nav a:hover {
+        opacity: 1;
+      }
+
+      .cta-header {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 52px;
+        padding: 0 22px;
+        border-radius: 999px;
+        background: #1b2d3d;
+        color: var(--white);
+        font-weight: 600;
+        font-size: 0.96rem;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .cta-header:hover {
+        transform: translateY(-1px);
+        background: #233a52;
+      }
+
+      .hero {
+        padding: 54px 0 24px;
+        background: linear-gradient(
+          90deg,
+          var(--bg) 0%,
+          var(--bg) 56%,
+          var(--bg-soft) 56%,
+          var(--bg-soft) 100%
+        );
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        min-height: 700px;
+        gap: 26px;
+      }
+
+      .hero-copy {
+        padding-right: 18px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin: 0 0 18px;
+        letter-spacing: 0.38em;
+        text-transform: uppercase;
+        font-size: 0.76rem;
+        color: var(--gold-deep);
+        font-weight: 600;
+      }
+
+      .eyebrow::before {
+        content: "";
+        display: inline-block;
+        width: 56px;
+        height: 1px;
+        background: rgba(28, 26, 23, 0.6);
+        vertical-align: middle;
+        margin-right: 18px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(4rem, 5.5vw, 6.7rem);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .hero h1 .accent {
+        display: inline-block;
+        color: var(--blue-soft);
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .hero-sub {
+        margin: 26px 0 28px;
+        color: rgba(28, 26, 23, 0.8);
+        line-height: 1.7;
+        font-size: 1.15rem;
+        max-width: 620px;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: linear-gradient(180deg, #35e07a 0%, #1dcf66 100%);
+        color: #fff;
+        height: 64px;
+        padding: 0 28px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1.04rem;
+        box-shadow: 0 18px 30px rgba(34, 210, 110, 0.22);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 36px rgba(34, 210, 110, 0.28);
+      }
+
+      .whatsapp-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      .link-arrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 18px;
+        font-size: 0.98rem;
+        color: var(--dark);
+        border-bottom: 1px solid rgba(28, 26, 23, 0.45);
+        padding-bottom: 6px;
+      }
+
+      .link-arrow .arrow {
+        font-size: 1.2rem;
+      }
+
+      .hero-visual {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .portrait-wrap {
+        width: min(620px, 100%);
+        height: 620px;
+        border-radius: 230px 230px 30px 30px;
+        overflow: hidden;
+        background: linear-gradient(180deg, #d2d0ce 0%, #c5c0bc 100%);
+        box-shadow: 0 28px 44px rgba(71, 62, 52, 0.08);
+        position: relative;
+      }
+
+      .portrait-wrap::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.12));
+        z-index: 1;
+      }
+
+      .portrait {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        transform: scale(1.08);
+      }
+
+      .about-section {
+        padding: 54px 0 40px;
+        background: var(--bg);
+      }
+
+      .about-wrap {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        align-items: center;
+        gap: 52px;
+      }
+
+      .about-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about-frame {
+        position: relative;
+        width: min(700px, 100%);
+        height: 680px;
+        border-radius: 36px;
+        overflow: hidden;
+        background: #d9d5d0;
+        box-shadow: 0 22px 40px rgba(28, 26, 23, 0.06);
+      }
+
+      .about-frame::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
+        z-index: 1;
+      }
+
+      .about-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .about-copy {
+        max-width: 660px;
+      }
+
+      .about-kicker {
+        display: inline-block;
+        margin: 0 0 16px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        color: var(--gold-deep);
+        font-weight: 700;
+      }
+
+      .about-copy h2 {
+        margin: 0;
+        color: var(--dark);
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3rem, 4vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        font-weight: 600;
+      }
+
+      .about-copy p {
+        margin: 24px 0 0;
+        color: rgba(28, 26, 23, 0.8);
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .site-section {
+        padding: 48px 0 100px;
+      }
+
+      .treatments-header h2 {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3.2rem, 4vw, 5.6rem);
+        line-height: 0.9;
+        letter-spacing: -0.05em;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .treatments-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+        margin-top: 26px;
+      }
+
+      .treatment-card {
+        border: 1px solid #d8d0c8;
+        border-radius: 26px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 18px rgba(35, 33, 31, 0.02);
+      }
+
+      .treatment-image {
+        position: relative;
+        height: 330px;
+        overflow: hidden;
+      }
+
+      .treatment-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .badge {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        height: 34px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 999px;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--dark);
+        font-weight: 700;
+      }
+
+      .treatment-content {
+        padding: 28px 30px 24px;
+      }
+
+      .treatment-content h3 {
+        margin: 0 0 16px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.4rem, 3vw, 3.3rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        color: var(--dark);
+      }
+
+      .treatment-content p {
+        margin: 0 0 24px;
+        color: rgba(28, 26, 23, 0.8);
+        line-height: 1.65;
+        font-size: 1.02rem;
+      }
+
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .checklist li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        line-height: 1.5;
+        color: var(--dark);
+      }
+
+      .check-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        margin-top: 4px;
+        border-radius: 50%;
+        background: rgba(184, 201, 217, 0.28);
+        color: #657f97;
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+
+      .callout {
+        margin: 32px auto 0;
+        text-align: center;
+        font-size: 1.08rem;
+        color: var(--dark);
+      }
+
+      .callout strong {
+        display: inline-block;
+        position: relative;
+      }
+
+      .callout strong::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        height: 1px;
+        background: rgba(197, 168, 128, 0.8);
+      }
+
+      .instagram-section {
+        padding: 20px 0 40px;
+      }
+
+      .instagram-card {
+        width: min(1200px, 100%);
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(28, 26, 23, 0.1);
+        border-radius: 34px;
+        min-height: 420px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 28px;
+      }
+
+      .instagram-wrap {
+        width: min(760px, 100%);
+        text-align: center;
+      }
+
+      .instagram-icon {
+        width: 88px;
+        height: 88px;
+        margin: 0 auto 18px;
+        border: 1px solid rgba(28, 26, 23, 0.22);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 2.8rem;
+        color: rgba(28, 26, 23, 0.8);
+      }
+
+      .instagram-title {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.6rem, 4vw, 4.2rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        font-weight: 500;
+        color: var(--dark);
+      }
+
+      .instagram-sub {
+        margin: 26px auto 0;
+        max-width: 660px;
+        font-size: 1.08rem;
+        color: rgba(28, 26, 23, 0.8);
+        line-height: 1.7;
+      }
+
+      .instagram-sub strong {
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .instagram-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: var(--navy);
+        color: var(--white);
+        width: min(420px, 100%);
+        height: 60px;
+        border-radius: 999px;
+        margin-top: 28px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        box-shadow: 0 8px 18px rgba(27, 45, 61, 0.18);
+      }
+
+      .instagram-link .mini {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.16);
+        font-size: 0.9rem;
+      }
+
+      .contact-band {
+        background: var(--navy);
+        color: var(--white);
+        padding: 68px 0 12px;
+      }
+
+      .contact-inner {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 42px;
+      }
+
+      .contact-copy {
+        padding: 12px 0;
+      }
+
+      .contact-kicker {
+        display: inline-block;
+        margin: 0 0 12px;
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+      }
+
+      .contact-title {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3.1rem, 5vw, 5.7rem);
+        line-height: 0.9;
+        letter-spacing: -0.05em;
+        font-weight: 600;
+        color: var(--white);
+      }
+
+      .contact-sub {
+        margin: 26px 0 0;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 560px;
+      }
+
+      .contact-list {
+        margin-top: 26px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        color: var(--white);
+      }
+
+      .contact-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .contact-label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.72rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .contact-value {
+        font-size: clamp(1.26rem, 2vw, 2.2rem);
+        line-height: 1.35;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--white);
+      }
+
+      .contact-link {
+        color: var(--white);
+      }
+
+      .contact-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: linear-gradient(180deg, #36df80 0%, #1fcc65 100%);
+        color: #fff;
+        height: 62px;
+        padding: 0 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1.03rem;
+        margin-top: 28px;
+        box-shadow: 0 18px 28px rgba(28, 204, 101, 0.22);
+      }
+
+      .contact-photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .photo-card {
+        width: min(560px, 100%);
+        height: 500px;
+        border-radius: 32px 32px 26px 26px;
+        overflow: hidden;
+        position: relative;
+        background: #ddd5d1;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.9);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .footer-inner {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .footer-brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        display: grid;
+        place-items: center;
+        font-size: 1.1rem;
+        color: var(--white);
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .footer-brand-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.45rem;
+        line-height: 1;
+      }
+
+      .footer-copy {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        text-align: right;
+      }
+
+      .floating-whatsapp {
+        position: fixed;
+        right: 24px;
+        bottom: 22px;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #35e07a 0%, #1dcf66 100%);
+        border: none;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        box-shadow: 0 18px 32px rgba(33, 206, 102, 0.22);
+        z-index: 200;
+        transition: transform 0.2s ease;
+      }
+
+      .floating-whatsapp:hover {
+        transform: translateY(-2px) scale(1.04);
+      }
+
+      @media (max-width: 980px) {
+        .nav {
+          display: none;
+        }
+
+        .hero {
+          background: var(--bg);
+        }
+
+        .hero-inner,
+        .contact-inner,
+        .about-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy,
+        .about-copy {
+          padding-right: 0;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.3rem, 10vw, 5.6rem);
+        }
+
+        .hero-sub,
+        .contact-sub {
+          max-width: 100%;
+        }
+
+        .treatments-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-photo {
+          order: -1;
+        }
+
+        .photo-card {
+          width: min(560px, 100%);
+          height: 420px;
+        }
+
+        .about-frame {
+          height: 540px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(100% - 28px, 1280px);
+        }
+
+        .topbar-inner {
+          height: 78px;
+        }
+
+        .brand {
+          min-width: 0;
+        }
+
+        .brand-mark {
+          width: 36px;
+          height: 36px;
+        }
+
+        .brand-text {
+          font-size: 1.15rem;
+        }
+
+        .brand-sub {
+          letter-spacing: 0.16em;
+          font-size: 0.52rem;
+        }
+
+        .cta-header {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 30px;
+        }
+
+        .eyebrow {
+          letter-spacing: 0.22em;
+          font-size: 0.68rem;
+        }
+
+        .hero-sub {
+          font-size: 1rem;
+          margin-top: 18px;
+        }
+
+        .hero-btn {
+          width: 100%;
+          max-width: 420px;
+          justify-content: center;
+        }
+
+        .hero-actions {
+          width: 100%;
+        }
+
+        .portrait-wrap {
+          width: min(500px, 100%);
+          height: 470px;
+          border-radius: 180px 180px 26px 26px;
+        }
+
+        .about-frame {
+          height: 420px;
+          border-radius: 24px;
+        }
+
+        .about-copy p {
+          font-size: 1rem;
+        }
+
+        .treatment-content {
+          padding: 22px 18px 24px;
+        }
+
+        .instagram-card {
+          padding: 30px 18px;
+        }
+
+        .instagram-link {
+          font-size: 0.94rem;
+        }
+
+        .contact-band {
+          padding-top: 48px;
+        }
+
+        .contact-list {
+          gap: 16px;
+        }
+
+        .contact-value {
+          font-size: 1.5rem;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 18px 0;
+        }
+
+        .footer-copy {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand" aria-label="Dra. Gabriela Peixoto">
+          <img class="brand-mark" src="./images/gabriela-logo.png" alt="Logo Dra. Gabriela Peixoto" />
+          <div class="brand-text">
+            Dra. Gabriela Peixoto
+            <span class="brand-sub">Cirurgia-Dentista</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre-doutora" data-testid="nav-link-sobre">Sobre a Dra. Gabriela</a>
+          <a href="#tratamentos" data-testid="nav-link-tratamentos">Tratamentos</a>
+          <a href="#contato" data-testid="nav-link-contato">Contato</a>
+        </nav>
+
+        <a
+          class="cta-header"
+          href="https://wa.me/5554991935075"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Agendar consulta"
+        >
+          Agendar Consulta
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow">Odontologia preventiva e estética</div>
+
+            <h1>
+              Restaurando sorrisos,<br />
+              preservando saúde<br />
+              <span class="accent">com a Dra. Gabriela Peixoto</span>
+            </h1>
+
+            <p class="hero-sub">
+              Cuidado odontológico preventivo e tratamentos personalizados para
+              devolver a sua melhor versão.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                href="https://wa.me/5554991935075"
+                target="_blank"
+                rel="noreferrer"
+                class="hero-btn"
+                data-testid="hero-whatsapp-btn"
+                aria-label="Agende sua consulta pelo WhatsApp"
+              >
+                <span class="whatsapp-icon">✆</span>
+                Agende sua Consulta pelo WhatsApp
+              </a>
+            </div>
+
+            <a href="#tratamentos" class="link-arrow">
+              <span>Conheça os tratamentos</span>
+              <span class="arrow">↓</span>
+            </a>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-wrap">
+              <img
+                class="portrait"
+                src="./images/gabriela-1.jpeg"
+                alt="Dra. Gabriela Peixoto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="sobre-doutora">
+        <div class="container about-wrap">
+          <div class="about-photo">
+            <div class="about-frame">
+              <img
+                src="./images/gabriela-2.jpeg"
+                alt="Dra. Gabriela Peixoto"
+              />
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <div class="about-kicker">Conheça a doutora</div>
+            <h2>Quem é a Dra. Gabriela Peixoto?</h2>
+
+            <p>
+              “Acredito que a odontologia vai muito além de transformar sorrisos:
+              ela é, acima de tudo, cuidar da saúde, promover bem-estar e devolver
+              a cada paciente a confiança em sorrir. Sou a Dra. Gabriela Peixoto e
+              tenho como propósito oferecer uma odontologia humanizada,
+              individualizada e baseada na prevenção, sempre focando a saúde bucal
+              como prioridade.”
+            </p>
+
+            <p>
+              Acredito que prevenir é o melhor caminho para manter um sorriso
+              saudável, evitando problemas futuros e proporcionando mais qualidade de
+              vida aos meus pacientes. Meu trabalho é guiado pelo equilíbrio entre
+              saúde, estética e harmonia do sorriso. Valorizo os desejos, as
+              expectativas e as necessidades de cada pessoa, buscando unir beleza e
+              naturalidade a tratamentos seguros, funcionais e adequados para cada
+              caso.
+            </p>
+
+            <p>
+              Cada paciente é único, e meu compromisso é oferecer o melhor de mim,
+              do meu conhecimento e da minha dedicação em cada atendimento,
+              respeitando a individualidade de cada sorriso e buscando sempre o
+              melhor resultado possível.
+            </p>
+
+            <p>
+              Mais do que cuidar de sorrisos, meu propósito é cuidar de pessoas.
+              Quero que cada paciente se sinta acolhido, seguro e confiante,
+              sabendo que sua saúde e seu bem-estar estarão sempre em primeiro lugar.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section" id="tratamentos">
+        <div class="container">
+          <header class="treatments-header">
+            <h2>Como posso cuidar do seu sorriso?</h2>
+          </header>
+
+          <div class="treatments-grid">
+            <article class="treatment-card">
+              <div class="treatment-image">
+                <img
+                  src="https://tse1.explicit.bing.net/th/id/OIP.8ZlZLgUwh0DOUiZ_U2bxOwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  alt="Estética dental"
+                />
+                <div class="badge">Harmonia &amp; Sorriso</div>
+              </div>
+
+              <div class="treatment-content">
+                <h3>Estética Dental</h3>
+                <p>
+                  Restaurações anteriores e posteriores, clareamento dental e
+                  muito mais para transformar o seu sorriso.
+                </p>
+
+                <ul class="checklist">
+                  <li>
+                    <span class="check-icon">✓</span>
+                    <span>
+                      <strong>Restaurações Estéticas</strong><br />
+                      Anteriores e posteriores, com resultado natural e
+                      imperceptível.
+                    </span>
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span>
+                    <span>
+                      <strong>Clareamento Dental</strong><br />
+                      Técnicas seguras para um sorriso mais iluminado e
+                      radiante.
+                    </span>
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span>
+                    <span>
+                      <strong>Facetas &amp; Lentes de Contato</strong><br />
+                      Sutileza e precisão na correção de pequenas imperfeições.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="treatment-card">
+              <div class="treatment-image">
+                <img
+                  src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=80"
+                  alt="Odontologia preventiva"
+                />
+                <div class="badge">Saúde &amp; Rotina</div>
+              </div>
+
+              <div class="treatment-content">
+                <h3>Odontologia Preventiva</h3>
+                <p>
+                  Limpezas, check-up, consultas de rotina e cuidados
+                  fundamentais para manter a saúde bucal em dia.
+                </p>
+
+                <ul class="checklist">
+                  <li>
+                    <span class="check-icon">✓</span>
+                    <span>
+                      <strong>Profilaxia &amp; Limpeza</strong><br />
+                      Remoção de placa e tártaro com polimento dental
+                      detalhado.
+                    </span>
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span>
+                    <span>
+                      <strong>Check-up Odontológico</strong><br />
+                      Avaliação clínica minuciosa da saúde bucal com um todo.
+                    </span>
+                  </li>
+                  <li>
+                    <span class="check-icon">✓</span>
+                    <span>
+                      <strong>Plano de Prevenção</strong><br />
+                      Orientações e rotina preventiva personalizada para você.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="callout">
+            <strong>Não encontrou o que procura?</strong>
+            <span>Fale com a Dra. Gabriela</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="instagram-section">
+        <div class="container">
+          <div class="instagram-card">
+            <div class="instagram-wrap">
+              <img class="instagram-icon" src="https://tse1.mm.bing.net/th/id/OIP.VEjJIIZku_pV2IaYBbc0mQHaHa?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt="Logo do Instagram" />
+
+              <h2 class="instagram-title">
+                Confira aqui um pouco do meu trabalho
+              </h2>
+
+              <p class="instagram-sub">
+                Acompanhe resultados reais, bastidores e o dia a dia do
+                consultório no <strong>Instagram</strong>.
+              </p>
+
+              <a
+                class="instagram-link"
+                href="https://www.instagram.com/dra.gabrielapeixoto_?cplk=MW5jMTJ0cml3bmxqdQ%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span class="mini">◎</span>
+                <span>@dra.gabrielapeixoto</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="contact-band" id="contato">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <div class="contact-kicker">Contato</div>
+
+          <h2 class="contact-title">Venha nos visitar</h2>
+
+          <p class="contact-sub">
+            Agende seu horário e venha conhecer um novo conceito em odontologia
+            acolhedora.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">◉</div>
+              <div>
+                <span class="contact-label">Telefone</span>
+                <div class="contact-value">
+                  <a
+                    href="tel:+5554991935075"
+                    class="contact-link"
+                    data-testid="contact-phone-link"
+                  >
+                    (54) 99193-5075
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">◔</div>
+              <div>
+                <span class="contact-label">Horário de atendimento</span>
+                <div class="contact-value">
+                  Segunda a Sexta: das 8h30 às 12h e das 13h30 às 19h
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">⌖</div>
+              <div>
+                <span class="contact-label">Endereço</span>
+                <div class="contact-value">
+                  Rua Tronca, 3345, Caxias do Sul - RS
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="contact-button"
+            href="https://wa.me/5554991935075"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="whatsapp-icon">✆</span>
+            Agende sua Consulta pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-photo">
+          <div class="photo-card">
+            <img
+              src="./images/gabriela-3.jpeg"
+              alt="Dra. Gabriela sorrindo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img class="footer-brand-mark" src="./images/gabriela-logo.png" alt="Logo Dra. Gabriela Peixoto" />
+          <div class="footer-brand-text">Dra. Gabriela Peixoto</div>
+        </div>
+
+        <div class="footer-copy">
+          © 2026 Dra. Gabriela Peixoto – Odontologia Humanizada &amp;
+          Estética. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/5554991935075"
+      target="_blank"
+      rel="noreferrer"
+      class="floating-whatsapp"
+      data-testid="floating-whatsapp-btn"
+      aria-label="Conversar pelo WhatsApp com Dra. Gabriela Peixoto"
+      title="Conversar pelo WhatsApp"
+    >
+      ✆
+    </a>
+  </body>
+</html>
+
+
+
+
+
+
+
+
